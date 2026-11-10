@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_EIS" targetNamespace="https://example.org/eis/bpmn" exporter="bpmn.io" exporterVersion="bpmn-js">
+  <bpmn:process id="Process_EIS" name="Ведение смены дежурной части" isExecutable="false">
+    <bpmn:documentation>Основной процесс ЕИС дежурной части охранного предприятия. Отзвоны охранников и сообщения оператор регистрирует вручную; сигналы приборов автоматически попадают в лог. Окончание смены определяется заранее заданным временем shiftEnd и не обрывает незавершённые состояния.</bpmn:documentation>
+    <bpmn:startEvent id="Start_Shift" name="Начало смены">
+      <bpmn:outgoing>F01</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Task_Open" name="Принять дежурство и открыть смену">
+      <bpmn:documentation>Смена оператора длится 12 часов; фиксируется плановое время её окончания.</bpmn:documentation>
+      <bpmn:incoming>F01</bpmn:incoming>
+      <bpmn:outgoing>F02</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_HandoverReview" name="Проверить незавершённые вопросы и имущество">
+      <bpmn:documentation>Проверить актуальные состояния, переданные предыдущим оператором.</bpmn:documentation>
+      <bpmn:incoming>F02</bpmn:incoming>
+      <bpmn:outgoing>F03</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_Loop" gatewayDirection="Converging">
+      <bpmn:incoming>F03</bpmn:incoming>
+      <bpmn:incoming>F23</bpmn:incoming>
+      <bpmn:outgoing>F04</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:eventBasedGateway id="Gateway_Wait" gatewayDirection="Diverging" eventGatewayType="Exclusive" instantiate="false">
+      <bpmn:documentation>Ожидается новое событие либо наступление заранее заданного окончания смены.</bpmn:documentation>
+      <bpmn:incoming>F04</bpmn:incoming>
+      <bpmn:outgoing>F05</bpmn:outgoing>
+      <bpmn:outgoing>F24</bpmn:outgoing>
+    </bpmn:eventBasedGateway>
+    <bpmn:intermediateCatchEvent id="Event_Message" name="Поступили сведения или сигнал">
+      <bpmn:documentation>Сообщение от охранника или ГБР, сигнал прибора либо сведения об операции с имуществом.</bpmn:documentation>
+      <bpmn:incoming>F05</bpmn:incoming>
+      <bpmn:outgoing>F06</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEvent_Input"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:exclusiveGateway id="Gateway_Source" gatewayDirection="Diverging">
+      <bpmn:incoming>F06</bpmn:incoming>
+      <bpmn:outgoing>F07</bpmn:outgoing>
+      <bpmn:outgoing>F08</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Task_AutoLog" name="Автоматически зарегистрировать сигнал прибора">
+      <bpmn:documentation>ЕИС автоматически добавляет сведения прибора в полный лог смены.</bpmn:documentation>
+      <bpmn:incoming>F07</bpmn:incoming>
+      <bpmn:outgoing>F09</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_ManualLog" name="Внести сообщение или операцию в ЕИС">
+      <bpmn:documentation>Оператор вводит полученные сведения; охранники и сотрудники ГБР передают сообщения оператору.</bpmn:documentation>
+      <bpmn:incoming>F08</bpmn:incoming>
+      <bpmn:outgoing>F10</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_SourceMerge" gatewayDirection="Converging">
+      <bpmn:incoming>F09</bpmn:incoming>
+      <bpmn:incoming>F10</bpmn:incoming>
+      <bpmn:outgoing>F11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_Clarify" name="Уточнить событие и зафиксировать действия">
+      <bpmn:documentation>Указать известные источник, объект, пост, время, участников, содержание и принятые меры. Неизвестные сведения отметить для уточнения.</bpmn:documentation>
+      <bpmn:incoming>F11</bpmn:incoming>
+      <bpmn:outgoing>F12</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_UpdateLog" name="Обновить лог и профильные журналы">
+      <bpmn:documentation>ЕИС сохраняет запись в логе смены; отзвон также доступен в журнале переклички. История изменений сохраняется.</bpmn:documentation>
+      <bpmn:incoming>F12</bpmn:incoming>
+      <bpmn:outgoing>F13</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_Respond" gatewayDirection="Diverging" name="Нужен выезд ГБР?">
+      <bpmn:incoming>F13</bpmn:incoming>
+      <bpmn:outgoing>F14</bpmn:outgoing>
+      <bpmn:outgoing>F21</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_CheckGroup" name="Проверить доступность ГБР и машины">
+      <bpmn:incoming>F14</bpmn:incoming>
+      <bpmn:outgoing>F15</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_Available" gatewayDirection="Diverging">
+      <bpmn:incoming>F15</bpmn:incoming>
+      <bpmn:outgoing>F16</bpmn:outgoing>
+      <bpmn:outgoing>F17</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_Dispatch" name="Назначить выезд и указать текущий статус">
+      <bpmn:documentation>Зафиксировать основание и объект, состав группы, машину и известное время. Последующие сведения о ходе и результате поступают как новые события.</bpmn:documentation>
+      <bpmn:incoming>F16</bpmn:incoming>
+      <bpmn:outgoing>F18</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_Unavailable" name="Зафиксировать невозможность выезда и решение">
+      <bpmn:documentation>При занятости группы или недоступности транспорта оператор фиксирует конфликт и принятое решение.</bpmn:documentation>
+      <bpmn:incoming>F17</bpmn:incoming>
+      <bpmn:outgoing>F19</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_DispatchMerge" gatewayDirection="Converging">
+      <bpmn:incoming>F18</bpmn:incoming>
+      <bpmn:incoming>F19</bpmn:incoming>
+      <bpmn:outgoing>F20</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_AllMerge" gatewayDirection="Converging">
+      <bpmn:incoming>F20</bpmn:incoming>
+      <bpmn:incoming>F21</bpmn:incoming>
+      <bpmn:outgoing>F22</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Task_SaveActions" name="Сохранить меры и состояние в журнале">
+      <bpmn:documentation>ЕИС обновляет лог смены; незавершённый выезд остаётся открытым и может быть передан следующей смене.</bpmn:documentation>
+      <bpmn:incoming>F22</bpmn:incoming>
+      <bpmn:outgoing>F23</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:intermediateCatchEvent id="Event_ShiftEnd" name="Наступило окончание 12-часовой смены">
+      <bpmn:documentation>Наступает фиксированное плановое время окончания этой смены, заданное при её открытии. Таймер не отсчитывает 12 часов заново после каждого события.</bpmn:documentation>
+      <bpmn:incoming>F24</bpmn:incoming>
+      <bpmn:outgoing>F25</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEvent_EndOfShift">
+        <bpmn:timeDate xsi:type="bpmn:tFormalExpression">${shiftEnd}</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:userTask id="Task_Report" name="Составить и проверить краткий отчёт">
+      <bpmn:documentation>На основе лога оператор подготавливает и проверяет отчёт, включая собственную оценку работы персонала.</bpmn:documentation>
+      <bpmn:incoming>F25</bpmn:incoming>
+      <bpmn:outgoing>F26</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_SaveReport" name="Сохранить отчёт и закрыть журнал смены">
+      <bpmn:documentation>Сохранение и закрытие журнала не завершает автоматически незавершённые события и действия.</bpmn:documentation>
+      <bpmn:incoming>F26</bpmn:incoming>
+      <bpmn:outgoing>F27</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_Transfer" name="Передать смену и открытые вопросы">
+      <bpmn:documentation>Следующему оператору передаются незавершённые действия, состояние объектов, транспорта и имущества.</bpmn:documentation>
+      <bpmn:incoming>F27</bpmn:incoming>
+      <bpmn:outgoing>F28</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="End_Shift" name="Смена передана">
+      <bpmn:incoming>F28</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="F01" sourceRef="Start_Shift" targetRef="Task_Open"/>
+    <bpmn:sequenceFlow id="F02" sourceRef="Task_Open" targetRef="Task_HandoverReview"/>
+    <bpmn:sequenceFlow id="F03" sourceRef="Task_HandoverReview" targetRef="Gateway_Loop"/>
+    <bpmn:sequenceFlow id="F04" sourceRef="Gateway_Loop" targetRef="Gateway_Wait"/>
+    <bpmn:sequenceFlow id="F05" sourceRef="Gateway_Wait" targetRef="Event_Message"/>
+    <bpmn:sequenceFlow id="F06" sourceRef="Event_Message" targetRef="Gateway_Source"/>
+    <bpmn:sequenceFlow id="F07" sourceRef="Gateway_Source" targetRef="Task_AutoLog" name="Сигнал прибора"/>
+    <bpmn:sequenceFlow id="F08" sourceRef="Gateway_Source" targetRef="Task_ManualLog" name="Сообщение / операция"/>
+    <bpmn:sequenceFlow id="F09" sourceRef="Task_AutoLog" targetRef="Gateway_SourceMerge"/>
+    <bpmn:sequenceFlow id="F10" sourceRef="Task_ManualLog" targetRef="Gateway_SourceMerge"/>
+    <bpmn:sequenceFlow id="F11" sourceRef="Gateway_SourceMerge" targetRef="Task_Clarify"/>
+    <bpmn:sequenceFlow id="F12" sourceRef="Task_Clarify" targetRef="Task_UpdateLog"/>
+    <bpmn:sequenceFlow id="F13" sourceRef="Task_UpdateLog" targetRef="Gateway_Respond"/>
+    <bpmn:sequenceFlow id="F14" sourceRef="Gateway_Respond" targetRef="Task_CheckGroup" name="Да"/>
+    <bpmn:sequenceFlow id="F15" sourceRef="Task_CheckGroup" targetRef="Gateway_Available"/>
+    <bpmn:sequenceFlow id="F16" sourceRef="Gateway_Available" targetRef="Task_Dispatch" name="Доступны"/>
+    <bpmn:sequenceFlow id="F17" sourceRef="Gateway_Available" targetRef="Task_Unavailable" name="Недоступны"/>
+    <bpmn:sequenceFlow id="F18" sourceRef="Task_Dispatch" targetRef="Gateway_DispatchMerge"/>
+    <bpmn:sequenceFlow id="F19" sourceRef="Task_Unavailable" targetRef="Gateway_DispatchMerge"/>
+    <bpmn:sequenceFlow id="F20" sourceRef="Gateway_DispatchMerge" targetRef="Gateway_AllMerge"/>
+    <bpmn:sequenceFlow id="F21" sourceRef="Gateway_Respond" targetRef="Gateway_AllMerge" name="Нет"/>
+    <bpmn:sequenceFlow id="F22" sourceRef="Gateway_AllMerge" targetRef="Task_SaveActions"/>
+    <bpmn:sequenceFlow id="F23" sourceRef="Task_SaveActions" targetRef="Gateway_Loop"/>
+    <bpmn:sequenceFlow id="F24" sourceRef="Gateway_Wait" targetRef="Event_ShiftEnd"/>
+    <bpmn:sequenceFlow id="F25" sourceRef="Event_ShiftEnd" targetRef="Task_Report"/>
+    <bpmn:sequenceFlow id="F26" sourceRef="Task_Report" targetRef="Task_SaveReport"/>
+    <bpmn:sequenceFlow id="F27" sourceRef="Task_SaveReport" targetRef="Task_Transfer"/>
+    <bpmn:sequenceFlow id="F28" sourceRef="Task_Transfer" targetRef="End_Shift"/>
+    <bpmn:textAnnotation id="Note_Manual">
+      <bpmn:text>Вручную: отзвоны, проверки постов, сообщения ГБР, происшествия и операции с имуществом.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="Note_Report">
+      <bpmn:text>Содержание отчёта: оценка работы персонала, тревоги с выездами ГБР, проверки постов и чрезвычайные происшествия.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="Note_Transfer">
+      <bpmn:text>Незавершённые действия и актуальные состояния не закрываются автоматически при смене оператора.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Assoc_Manual" sourceRef="Task_ManualLog" targetRef="Note_Manual" associationDirection="None"/>
+    <bpmn:association id="Assoc_Report" sourceRef="Task_Report" targetRef="Note_Report" associationDirection="None"/>
+    <bpmn:association id="Assoc_Transfer" sourceRef="Task_Transfer" targetRef="Note_Transfer" associationDirection="None"/>
+  </bpmn:process>
+  <bpmn:collaboration id="Collaboration_EIS">
+    <bpmn:participant id="Participant_EIS" name="Дежурная часть охранного предприятия" processRef="Process_EIS"/>
+  </bpmn:collaboration>
+  <bpmndi:BPMNDiagram id="Diagram_EIS">
+    <bpmndi:BPMNPlane id="Plane_EIS" bpmnElement="Collaboration_EIS">
+      <bpmndi:BPMNShape id="Shape_Participant_EIS" bpmnElement="Participant_EIS" isHorizontal="true">
+        <dc:Bounds x="45" y="65" width="3130" height="850"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Start_Shift" bpmnElement="Start_Shift">
+        <dc:Bounds x="110" y="315" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="93" y="356" width="70" height="26"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Open" bpmnElement="Task_Open">
+        <dc:Bounds x="180" y="293" width="170" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_HandoverReview" bpmnElement="Task_HandoverReview">
+        <dc:Bounds x="380" y="293" width="170" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_Loop" bpmnElement="Gateway_Loop">
+        <dc:Bounds x="580" y="308" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_Wait" bpmnElement="Gateway_Wait">
+        <dc:Bounds x="680" y="308" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Event_Message" bpmnElement="Event_Message">
+        <dc:Bounds x="780" y="315" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="746" y="357" width="110" height="32"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_Source" bpmnElement="Gateway_Source">
+        <dc:Bounds x="870" y="308" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_AutoLog" bpmnElement="Task_AutoLog">
+        <dc:Bounds x="970" y="175" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_ManualLog" bpmnElement="Task_ManualLog">
+        <dc:Bounds x="970" y="420" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_SourceMerge" bpmnElement="Gateway_SourceMerge">
+        <dc:Bounds x="1200" y="308" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Clarify" bpmnElement="Task_Clarify">
+        <dc:Bounds x="1300" y="293" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_UpdateLog" bpmnElement="Task_UpdateLog">
+        <dc:Bounds x="1520" y="293" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_Respond" bpmnElement="Gateway_Respond">
+        <dc:Bounds x="1740" y="308" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1720" y="270" width="100" height="28"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_CheckGroup" bpmnElement="Task_CheckGroup">
+        <dc:Bounds x="1840" y="293" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_Available" bpmnElement="Gateway_Available">
+        <dc:Bounds x="2060" y="308" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Dispatch" bpmnElement="Task_Dispatch">
+        <dc:Bounds x="2160" y="195" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Unavailable" bpmnElement="Task_Unavailable">
+        <dc:Bounds x="2160" y="420" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_DispatchMerge" bpmnElement="Gateway_DispatchMerge">
+        <dc:Bounds x="2390" y="308" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_AllMerge" bpmnElement="Gateway_AllMerge">
+        <dc:Bounds x="2730" y="308" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_SaveActions" bpmnElement="Task_SaveActions">
+        <dc:Bounds x="2830" y="293" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Event_ShiftEnd" bpmnElement="Event_ShiftEnd">
+        <dc:Bounds x="687" y="655" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="648" y="697" width="118" height="42"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Report" bpmnElement="Task_Report">
+        <dc:Bounds x="800" y="633" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_SaveReport" bpmnElement="Task_SaveReport">
+        <dc:Bounds x="1025" y="633" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Transfer" bpmnElement="Task_Transfer">
+        <dc:Bounds x="1250" y="633" width="180" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_End_Shift" bpmnElement="End_Shift">
+        <dc:Bounds x="1495" y="655" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1480" y="696" width="72" height="28"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Note_Manual" bpmnElement="Note_Manual">
+        <dc:Bounds x="965" y="535" width="370" height="64"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Note_Report" bpmnElement="Note_Report">
+        <dc:Bounds x="800" y="790" width="390" height="74"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Note_Transfer" bpmnElement="Note_Transfer">
+        <dc:Bounds x="1250" y="790" width="380" height="74"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_F01" bpmnElement="F01">
+        <di:waypoint x="146" y="333"/>
+        <di:waypoint x="180" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F02" bpmnElement="F02">
+        <di:waypoint x="350" y="333"/>
+        <di:waypoint x="380" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F03" bpmnElement="F03">
+        <di:waypoint x="550" y="333"/>
+        <di:waypoint x="580" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F04" bpmnElement="F04">
+        <di:waypoint x="630" y="333"/>
+        <di:waypoint x="680" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F05" bpmnElement="F05">
+        <di:waypoint x="730" y="333"/>
+        <di:waypoint x="780" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F06" bpmnElement="F06">
+        <di:waypoint x="816" y="333"/>
+        <di:waypoint x="870" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F07" bpmnElement="F07">
+        <di:waypoint x="895" y="308"/>
+        <di:waypoint x="895" y="215"/>
+        <di:waypoint x="970" y="215"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="810" y="185" width="140" height="28"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F08" bpmnElement="F08">
+        <di:waypoint x="895" y="358"/>
+        <di:waypoint x="895" y="460"/>
+        <di:waypoint x="970" y="460"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="902" y="386" width="120" height="28"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F09" bpmnElement="F09">
+        <di:waypoint x="1150" y="215"/>
+        <di:waypoint x="1225" y="215"/>
+        <di:waypoint x="1225" y="308"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F10" bpmnElement="F10">
+        <di:waypoint x="1150" y="460"/>
+        <di:waypoint x="1225" y="460"/>
+        <di:waypoint x="1225" y="358"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F11" bpmnElement="F11">
+        <di:waypoint x="1250" y="333"/>
+        <di:waypoint x="1300" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F12" bpmnElement="F12">
+        <di:waypoint x="1480" y="333"/>
+        <di:waypoint x="1520" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F13" bpmnElement="F13">
+        <di:waypoint x="1700" y="333"/>
+        <di:waypoint x="1740" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F14" bpmnElement="F14">
+        <di:waypoint x="1790" y="333"/>
+        <di:waypoint x="1840" y="333"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1796" y="312" width="25" height="18"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F15" bpmnElement="F15">
+        <di:waypoint x="2020" y="333"/>
+        <di:waypoint x="2060" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F16" bpmnElement="F16">
+        <di:waypoint x="2085" y="308"/>
+        <di:waypoint x="2085" y="235"/>
+        <di:waypoint x="2160" y="235"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2095" y="210" width="70" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F17" bpmnElement="F17">
+        <di:waypoint x="2085" y="358"/>
+        <di:waypoint x="2085" y="460"/>
+        <di:waypoint x="2160" y="460"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2094" y="403" width="72" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F18" bpmnElement="F18">
+        <di:waypoint x="2340" y="235"/>
+        <di:waypoint x="2415" y="235"/>
+        <di:waypoint x="2415" y="308"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F19" bpmnElement="F19">
+        <di:waypoint x="2340" y="460"/>
+        <di:waypoint x="2415" y="460"/>
+        <di:waypoint x="2415" y="358"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F20" bpmnElement="F20">
+        <di:waypoint x="2440" y="333"/>
+        <di:waypoint x="2730" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F21" bpmnElement="F21">
+        <di:waypoint x="1765" y="358"/>
+        <di:waypoint x="1765" y="550"/>
+        <di:waypoint x="2755" y="550"/>
+        <di:waypoint x="2755" y="358"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1774" y="529" width="25" height="18"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F22" bpmnElement="F22">
+        <di:waypoint x="2780" y="333"/>
+        <di:waypoint x="2830" y="333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F23" bpmnElement="F23">
+        <di:waypoint x="3010" y="333"/>
+        <di:waypoint x="3100" y="333"/>
+        <di:waypoint x="3100" y="110"/>
+        <di:waypoint x="605" y="110"/>
+        <di:waypoint x="605" y="308"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F24" bpmnElement="F24">
+        <di:waypoint x="705" y="358"/>
+        <di:waypoint x="705" y="655"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F25" bpmnElement="F25">
+        <di:waypoint x="723" y="673"/>
+        <di:waypoint x="800" y="673"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F26" bpmnElement="F26">
+        <di:waypoint x="980" y="673"/>
+        <di:waypoint x="1025" y="673"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F27" bpmnElement="F27">
+        <di:waypoint x="1205" y="673"/>
+        <di:waypoint x="1250" y="673"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F28" bpmnElement="F28">
+        <di:waypoint x="1430" y="673"/>
+        <di:waypoint x="1495" y="673"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Assoc_Manual" bpmnElement="Assoc_Manual">
+        <di:waypoint x="1060" y="500"/>
+        <di:waypoint x="1060" y="535"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Assoc_Report" bpmnElement="Assoc_Report">
+        <di:waypoint x="890" y="713"/>
+        <di:waypoint x="890" y="790"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Assoc_Transfer" bpmnElement="Assoc_Transfer">
+        <di:waypoint x="1340" y="713"/>
+        <di:waypoint x="1340" y="790"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
