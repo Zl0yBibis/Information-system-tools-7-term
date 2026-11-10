@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3770" height="2290" viewBox="0 0 3770 2290">
+  <rect x="0" y="0" width="3770" height="2290" fill="#f7f9fc"/>
+  <text x="80" y="68" fill="#142b43" font-size="34" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ER-диаграмма · дежурная смена охранного предприятия</text>
+  <text x="80" y="107" fill="#50687c" font-size="20" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">Логическая модель данных по основному процессу ЕИС</text>
+  <line x1="80" y1="135" x2="3670" y2="135" stroke="#d7e2eb" stroke-width="2"/>
+  <polyline points="450,310 690,310" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="450,310 690,310" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="265,394 265,825" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="265,394 265,825" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="330,394 330,650 1150,650 1150,880 1300,880" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="330,394 330,650 1150,650 1150,880 1300,880" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1060,300 1300,300" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1060,300 1300,300" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="875,394 875,610 1220,610 1220,850 1300,850" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="875,394 875,610 1220,610 1220,850 1300,850" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1485,452 1485,825" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1485,452 1485,825" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,330 1670,330" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,330 1670,330" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2095,394 2095,825" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2095,394 2095,825" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2280,305 2520,305" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2280,305 2520,305" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="3130,305 2890,305" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="3130,305 2890,305" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="450,925 1300,925" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="450,925 1300,925" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,930 1670,930" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,930 1670,930" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2280,925 2520,925" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2280,925 2520,925" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2890,900 3130,900" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="2890,900 3130,900" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1530,1153 1530,1250 3315,1250 3315,950" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1530,1153 1530,1250 3315,1250 3315,950" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1300,1070 1240,1070 1240,1200 1340,1200 1340,1153" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1300,1070 1240,1070 1240,1200 1340,1200 1340,1153" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="3500,300 3670,300 3670,1635 3500,1635" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="3500,300 3670,300 3670,1635 3500,1635" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1610,1153 1610,1350 3260,1350 3260,1540" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1610,1153 1610,1350 3260,1350 3260,1540" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="265,1694 265,1990 3315,1990 3315,1781" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="265,1694 265,1990 3315,1990 3315,1781" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="450,1610 690,1610" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="450,1610 690,1610" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1060,1610 1300,1610" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1060,1610 1300,1610" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1380,1153 1380,1540" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1380,1153 1380,1540" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,280 1810,280 1810,1605 1670,1605" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,280 1810,280 1810,1605 1670,1605" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,360 1860,360 1860,1680 1670,1680" fill="none" stroke="#f7f9fc" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="1910,360 1860,360 1860,1680 1670,1680" fill="none" stroke="#60778b" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="82" y="244" width="370" height="154" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="80" y="240" width="370" height="154" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 88 240 H 442 Q 450 240 450 248 V 287 H 80 V 248 Q 80 240 88 240 Z" fill="#236f6a"/>
+  <text x="94" y="270" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ОБЪЕКТ ОХРАНЫ</text>
+  <text x="93" y="317" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="170" y="317" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_объекта</text>
+  <text x="93" y="346" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="170" y="346" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">наименование</text>
+  <rect x="81" y="355" width="368" height="29" fill="#f8fafc"/>
+  <text x="93" y="375" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="170" y="375" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">адрес</text>
+  <rect x="692" y="244" width="370" height="154" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="690" y="240" width="370" height="154" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 698 240 H 1052 Q 1060 240 1060 248 V 287 H 690 V 248 Q 690 240 698 240 Z" fill="#236f6a"/>
+  <text x="704" y="270" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ПОСТ ОХРАНЫ</text>
+  <text x="703" y="317" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="780" y="317" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_поста</text>
+  <text x="703" y="346" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="780" y="346" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_объекта</text>
+  <rect x="691" y="355" width="368" height="29" fill="#f8fafc"/>
+  <text x="703" y="375" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="780" y="375" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">наименование</text>
+  <rect x="1302" y="244" width="370" height="212" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="1300" y="240" width="370" height="212" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 1308 240 H 1662 Q 1670 240 1670 248 V 287 H 1300 V 248 Q 1300 240 1308 240 Z" fill="#236f6a"/>
+  <text x="1314" y="270" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ДЕЖУРСТВО ОХРАННИКА</text>
+  <text x="1313" y="317" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="1390" y="317" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_дежурства</text>
+  <text x="1313" y="346" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="1390" y="346" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_охранника</text>
+  <rect x="1301" y="355" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="375" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="1390" y="375" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_поста</text>
+  <text x="1313" y="404" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="1390" y="404" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">начало и окончание службы</text>
+  <rect x="1301" y="413" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="433" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="1390" y="433" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">плановая продолжительность</text>
+  <rect x="1912" y="244" width="370" height="154" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="1910" y="240" width="370" height="154" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 1918 240 H 2272 Q 2280 240 2280 248 V 287 H 1910 V 248 Q 1910 240 1918 240 Z" fill="#2d5782"/>
+  <text x="1924" y="270" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">СОТРУДНИК</text>
+  <text x="1923" y="317" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="2000" y="317" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_сотрудника</text>
+  <text x="1923" y="346" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2000" y="346" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">ФИО</text>
+  <rect x="1911" y="355" width="368" height="29" fill="#f8fafc"/>
+  <text x="1923" y="375" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2000" y="375" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">должность / роль</text>
+  <rect x="2522" y="244" width="370" height="212" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="2520" y="240" width="370" height="212" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 2528 240 H 2882 Q 2890 240 2890 248 V 287 H 2520 V 248 Q 2520 240 2528 240 Z" fill="#99632c"/>
+  <text x="2534" y="270" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">СОСТАВ ГБР</text>
+  <text x="2533" y="317" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="2610" y="317" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_участия</text>
+  <text x="2533" y="346" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="2610" y="346" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_ГБР</text>
+  <rect x="2521" y="355" width="368" height="29" fill="#f8fafc"/>
+  <text x="2533" y="375" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="2610" y="375" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_сотрудника</text>
+  <text x="2533" y="404" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2610" y="404" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">время начала участия</text>
+  <rect x="2521" y="413" width="368" height="29" fill="#f8fafc"/>
+  <text x="2533" y="433" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2610" y="433" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">время окончания участия</text>
+  <rect x="3132" y="244" width="370" height="125" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="3130" y="240" width="370" height="125" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 3138 240 H 3492 Q 3500 240 3500 248 V 287 H 3130 V 248 Q 3130 240 3138 240 Z" fill="#99632c"/>
+  <text x="3144" y="270" fill="#ffffff" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ГРУППА БЫСТРОГО РЕАГИРОВАНИЯ</text>
+  <text x="3143" y="317" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="3220" y="317" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_ГБР</text>
+  <text x="3143" y="346" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="3220" y="346" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">наименование</text>
+  <rect x="82" y="829" width="370" height="183" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="80" y="825" width="370" height="183" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 88 825 H 442 Q 450 825 450 833 V 872 H 80 V 833 Q 80 825 88 825 Z" fill="#236f6a"/>
+  <text x="94" y="855" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ОХРАННЫЙ ПРИБОР</text>
+  <text x="93" y="902" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="170" y="902" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_прибора</text>
+  <text x="93" y="931" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="170" y="931" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_объекта</text>
+  <rect x="81" y="940" width="368" height="29" fill="#f8fafc"/>
+  <text x="93" y="960" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="170" y="960" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">тип, идентификатор</text>
+  <text x="93" y="989" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="170" y="989" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">состояние</text>
+  <rect x="1302" y="829" width="370" height="328" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="1300" y="825" width="370" height="328" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 1308 825 H 1662 Q 1670 825 1670 833 V 872 H 1300 V 833 Q 1300 825 1308 825 Z" fill="#184e6d"/>
+  <text x="1314" y="855" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">СОБЫТИЕ СМЕНЫ</text>
+  <text x="1313" y="902" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="1390" y="902" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_события</text>
+  <text x="1313" y="931" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="1390" y="931" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_смены</text>
+  <rect x="1301" y="940" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="960" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK?</text>
+  <text x="1390" y="960" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_объекта, id_поста</text>
+  <text x="1313" y="989" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK?</text>
+  <text x="1390" y="989" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_прибора, id_дежурства</text>
+  <rect x="1301" y="998" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="1018" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK?</text>
+  <text x="1390" y="1018" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_исходного_события</text>
+  <text x="1313" y="1047" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="1390" y="1047" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">вид, источник</text>
+  <rect x="1301" y="1056" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="1076" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="1390" y="1076" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">время события и получения</text>
+  <text x="1313" y="1105" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="1390" y="1105" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">время регистрации</text>
+  <rect x="1301" y="1114" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="1134" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="1390" y="1134" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">содержание, действия, статус</text>
+  <rect x="1912" y="829" width="370" height="212" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="1910" y="825" width="370" height="212" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 1918 825 H 2272 Q 2280 825 2280 833 V 872 H 1910 V 833 Q 1910 825 1918 825 Z" fill="#2d5782"/>
+  <text x="1924" y="855" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">СМЕНА ОПЕРАТОРА</text>
+  <text x="1923" y="902" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="2000" y="902" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_смены</text>
+  <text x="1923" y="931" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="2000" y="931" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_оператора</text>
+  <rect x="1911" y="940" width="368" height="29" fill="#f8fafc"/>
+  <text x="1923" y="960" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2000" y="960" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">начало смены</text>
+  <text x="1923" y="989" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2000" y="989" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">плановое окончание</text>
+  <rect x="1911" y="998" width="368" height="29" fill="#f8fafc"/>
+  <text x="1923" y="1018" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2000" y="1018" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">фактическое окончание</text>
+  <rect x="2522" y="829" width="370" height="183" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="2520" y="825" width="370" height="183" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 2528 825 H 2882 Q 2890 825 2890 833 V 872 H 2520 V 833 Q 2520 825 2528 825 Z" fill="#2d5782"/>
+  <text x="2534" y="855" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">КРАТКИЙ ОТЧЁТ</text>
+  <text x="2533" y="902" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="2610" y="902" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_отчёта</text>
+  <text x="2533" y="931" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK UQ</text>
+  <text x="2610" y="931" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_смены</text>
+  <rect x="2521" y="940" width="368" height="29" fill="#f8fafc"/>
+  <text x="2533" y="960" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2610" y="960" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">оценка работы персонала</text>
+  <text x="2533" y="989" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="2610" y="989" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">содержание, дата составления</text>
+  <rect x="3132" y="829" width="370" height="125" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="3130" y="825" width="370" height="125" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 3138 825 H 3492 Q 3500 825 3500 833 V 872 H 3130 V 833 Q 3130 825 3138 825 Z" fill="#2d5782"/>
+  <text x="3144" y="855" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">СОБЫТИЯ В ОТЧЁТЕ</text>
+  <text x="3143" y="902" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK FK</text>
+  <text x="3220" y="902" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_отчёта</text>
+  <text x="3143" y="931" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK FK</text>
+  <text x="3220" y="931" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_события (UQ)</text>
+  <rect x="82" y="1544" width="370" height="154" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="80" y="1540" width="370" height="154" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 88 1540 H 442 Q 450 1540 450 1548 V 1587 H 80 V 1548 Q 80 1540 88 1540 Z" fill="#78558d"/>
+  <text x="94" y="1570" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">АВТОМОБИЛЬ</text>
+  <text x="93" y="1617" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="170" y="1617" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_автомобиля</text>
+  <text x="93" y="1646" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="170" y="1646" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">госномер</text>
+  <rect x="81" y="1655" width="368" height="29" fill="#f8fafc"/>
+  <text x="93" y="1675" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="170" y="1675" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">текущее состояние</text>
+  <rect x="692" y="1544" width="370" height="154" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="690" y="1540" width="370" height="154" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 698 1540 H 1052 Q 1060 1540 1060 1548 V 1587 H 690 V 1548 Q 690 1540 698 1540 Z" fill="#78558d"/>
+  <text x="704" y="1570" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ОПЕРАТИВНОЕ ИМУЩЕСТВО</text>
+  <text x="703" y="1617" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="780" y="1617" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_предмета</text>
+  <text x="703" y="1646" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK?</text>
+  <text x="780" y="1646" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_автомобиля</text>
+  <rect x="691" y="1655" width="368" height="29" fill="#f8fafc"/>
+  <text x="703" y="1675" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="780" y="1675" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">тип, учётное обозначение</text>
+  <rect x="1302" y="1544" width="370" height="241" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="1300" y="1540" width="370" height="241" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 1308 1540 H 1662 Q 1670 1540 1670 1548 V 1587 H 1300 V 1548 Q 1300 1540 1308 1540 Z" fill="#78558d"/>
+  <text x="1314" y="1570" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ОПЕРАЦИЯ С ИМУЩЕСТВОМ</text>
+  <text x="1313" y="1617" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="1390" y="1617" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_операции</text>
+  <text x="1313" y="1646" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="1390" y="1646" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_предмета</text>
+  <rect x="1301" y="1655" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="1675" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK UQ</text>
+  <text x="1390" y="1675" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_события</text>
+  <text x="1313" y="1704" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK?</text>
+  <text x="1390" y="1704" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_передавшего</text>
+  <rect x="1301" y="1713" width="368" height="29" fill="#f8fafc"/>
+  <text x="1313" y="1733" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK?</text>
+  <text x="1390" y="1733" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_получившего</text>
+  <text x="1313" y="1762" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="1390" y="1762" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">вид операции, время</text>
+  <rect x="3132" y="1544" width="370" height="241" rx="8" fill="#dce5ee" opacity=".48"/>
+  <rect x="3130" y="1540" width="370" height="241" rx="8" fill="white" stroke="#bdcbd8" stroke-width="1.5"/>
+  <path d="M 3138 1540 H 3492 Q 3500 1540 3500 1548 V 1587 H 3130 V 1548 Q 3130 1540 3138 1540 Z" fill="#99632c"/>
+  <text x="3144" y="1570" fill="#ffffff" font-size="18" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">ВЫЕЗД ГБР</text>
+  <text x="3143" y="1617" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">PK</text>
+  <text x="3220" y="1617" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_выезда</text>
+  <text x="3143" y="1646" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="3220" y="1646" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_ГБР</text>
+  <rect x="3131" y="1655" width="368" height="29" fill="#f8fafc"/>
+  <text x="3143" y="1675" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK</text>
+  <text x="3220" y="1675" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_события_основания</text>
+  <text x="3143" y="1704" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">FK?</text>
+  <text x="3220" y="1704" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">id_автомобиля</text>
+  <rect x="3131" y="1713" width="368" height="29" fill="#f8fafc"/>
+  <text x="3143" y="1733" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="3220" y="1733" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">назначение, выезд, прибытие</text>
+  <text x="3143" y="1762" fill="#677d91" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold"></text>
+  <text x="3220" y="1762" fill="#24364a" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">возврат, статус, результат</text>
+  <rect x="473.5" y="312.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="484.0" y="329.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="631.0" y="284.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="656.0" y="301.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="240.5" y="416.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="251.0" y="433.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="254.0" y="779.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="279.0" y="796.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="292.0" y="416.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="316.0" y="433.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1241.0" y="854.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1266.0" y="871.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1083.5" y="302.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1094.0" y="319.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="1241.0" y="274.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1266.0" y="291.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="837.0" y="416.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="861.0" y="433.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1241.0" y="824.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1266.0" y="841.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1447.0" y="474.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1471.0" y="491.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1474.0" y="779.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1499.0" y="796.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1865.5" y="304.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1876.0" y="321.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="1679.0" y="332.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1704.0" y="349.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1776" y="297" width="84" height="22" rx="4" fill="#f7f9fc"/>
+  <text x="1780" y="312" fill="#587084" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">охранник</text>
+  <rect x="2070.5" y="416.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2081.0" y="433.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="2084.0" y="779.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2109.0" y="796.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="2106" y="575" width="84" height="22" rx="4" fill="#f7f9fc"/>
+  <text x="2110" y="590" fill="#587084" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">оператор</text>
+  <rect x="2303.5" y="307.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2314.0" y="324.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="2461.0" y="279.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2486.0" y="296.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="3085.5" y="279.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="3096.0" y="296.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="2899.0" y="307.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2924.0" y="324.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="460.0" y="927.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="484.0" y="944.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1241.0" y="899.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1266.0" y="916.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1865.5" y="904.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1876.0" y="921.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="1679.0" y="932.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1704.0" y="949.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="2303.5" y="927.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2314.0" y="944.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="2462.0" y="899.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2486.0" y="916.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="2913.5" y="902.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="2924.0" y="919.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="3071.0" y="874.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="3096.0" y="891.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1505.5" y="1175.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1516.0" y="1192.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="3277.0" y="972.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="3301.0" y="989.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1242.0" y="1044.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1266.0" y="1061.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1301.0" y="1175.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1326.0" y="1192.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1106" y="1203" width="165" height="22" rx="4" fill="#f7f9fc"/>
+  <text x="1110" y="1218" fill="#587084" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">связанные события</text>
+  <rect x="3523.5" y="302.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="3534.0" y="319.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="3509.0" y="1637.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="3534.0" y="1654.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1585.5" y="1175.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1596.0" y="1192.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="3249.0" y="1494.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="3274.0" y="1511.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="2426" y="1316" width="156" height="22" rx="4" fill="#f7f9fc"/>
+  <text x="2430" y="1331" fill="#587084" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">основание выезда</text>
+  <rect x="227.0" y="1716.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="251.0" y="1733.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="3276.0" y="1803.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="3301.0" y="1820.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="460.0" y="1612.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="484.0" y="1629.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="631.0" y="1584.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="656.0" y="1601.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="516" y="1577" width="111" height="22" rx="4" fill="#f7f9fc"/>
+  <text x="520" y="1592" fill="#587084" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">ключ машины</text>
+  <rect x="1083.5" y="1612.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1094.0" y="1629.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="1241.0" y="1584.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1266.0" y="1601.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1355.5" y="1175.0" width="21" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1366.0" y="1192.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="1370.0" y="1494.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1394.0" y="1511.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1852.0" y="254.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1876.0" y="271.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1679.0" y="1607.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1704.0" y="1624.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1696" y="1570" width="75" height="22" rx="4" fill="#f7f9fc"/>
+  <text x="1700" y="1585" fill="#587084" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">передал</text>
+  <rect x="1852.0" y="334.0" width="48" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1876.0" y="351.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..1</text>
+  <rect x="1679.0" y="1682.0" width="50" height="24" rx="4" fill="#f7f9fc"/>
+  <text x="1704.0" y="1699.0" fill="#304860" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" text-anchor="middle">0..*</text>
+  <rect x="1696" y="1645" width="75" height="22" rx="4" fill="#f7f9fc"/>
+  <text x="1700" y="1660" fill="#587084" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">получил</text>
+  <rect x="80" y="2050" width="3590" height="160" rx="8" fill="#eaf0f6" stroke="#d6e2ed"/>
+  <text x="105" y="2082" fill="#233f59" font-size="17" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold">Обозначения:</text>
+  <text x="260" y="2082" fill="#304860" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">PK — первичный ключ; FK — внешний ключ; FK? — необязательная связь; UQ — уникальное значение.</text>
+  <text x="105" y="2117" fill="#304860" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">Кратность у конца связи: 1 — ровно одна запись; 0..1 — не более одной; 0..* — ноль или более записей.</text>
+  <text x="105" y="2150" fill="#304860" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">Отзвон — вид события. Имущество и состояние автомобиля учитываются отдельно; незавершённые действия сохраняются при смене.</text>
+  <text x="105" y="2183" fill="#304860" font-size="16" font-family="DejaVu Sans, Arial, sans-serif" font-weight="normal">В отчёт включаются только события соответствующей смены.</text>
+</svg>
